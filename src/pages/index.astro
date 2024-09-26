@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Portfolio from "../components/Portfolio.astro";
+import About from "../components/About.astro";
+import Hero from "../components/Hero.astro";
+import Timeline from "../components/Timeline.astro";
 ---
 
 <BaseLayout title="Home">
-	<section>
-		<h1>Section Title</h1>
-		<p>Section content goes here.</p>
-	  </section>
+  <Hero />
+  <About />
+  <Portfolio />
+  <Timeline />
 </BaseLayout>

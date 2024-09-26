@@ -1,0 +1,78 @@
+---
+const projects = [
+  {
+    title: "Project 1",
+    description: "A brief description of Project 1.",
+    image: "src/assets/images/axel.jpg",
+    link: "/projects/project1"
+  },
+  {
+    title: "Project 2",
+    description: "A brief description of Project 2.",
+    image: "src/assets/images/axel.jpg",
+    link: "/projects/project2"
+  },
+  // Add more projects here
+];
+---
+
+<section>
+  <h2>Portfolio</h2>
+  <ul class="project-list">
+    {projects.map((project) => (
+      <li class="project-item">
+        <details>
+          <summary class="project-title">{project.title}</summary>
+          <div class="hover-container">
+            <img src={project.image} alt={project.title} />
+          </div>
+        </details>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  section {
+    background-color: #fbff00;
+  }
+
+  /* General styling for clickable titles */
+  .project-title {
+    cursor: pointer;
+    color: #007bff;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    transition: color 0.3s;
+  }
+
+  .project-title:hover {
+    color: #0056b3;
+  }
+
+  /* Hide the image initially */
+  .hover-container img {
+    display: none;
+    max-width: 100%;
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Show image on hover for desktop */
+  @media (hover: hover) {
+    .project-item:hover .hover-container img {
+      display: block;
+    }
+  }
+
+  /* Show image when <details> is open (for mobile/tap behavior) */
+  details[open] .hover-container img {
+    display: block;
+  }
+
+  /* Optional: change hover behavior for summary */
+  details:hover summary {
+    color: #0056b3;
+  }
+</style>
