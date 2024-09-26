@@ -21,21 +21,7 @@ const { title = "" } = Astro.props;
     </main>
     <footer>
       <section>
-        <form name="contact" method="POST" data-netlify="true">
-          <p>Hej, Axel.</p>
-          <p>
-            Jeg er <input type="text" name="name" placeholder="Navn" required />
-            fra
-            <input type="text" name="company" placeholder="Firma" required />
-          </p>
-          <p>Jeg er interesseret i at snakke med dig om praktik.</p>
-          <p>
-            Du kan skrive til mig på
-            <input type="email" name="email" placeholder="E-mail" required />
-          </p>
-          <p>Ser frem til at høre fra dig!</p>
-          <button type="submit">Indsend</button>
-        </form>
+        <p>© 2024 Axel Wiingaard</p>
       </section>
     </footer>
   </body>
@@ -43,36 +29,8 @@ const { title = "" } = Astro.props;
 
 <style>
   footer {
-    background-color: #40445c;
+    background-color: #0b0b0a;
     color: #ffffe3;
     padding: 20px;
-  }
-
-  input[type="text"],
-  input[type="email"] {
-    color: #ffffe3;
-    border: none;
-    border-bottom: 1px solid #ffffe3;
-    padding-left: 5px;
-    margin: 10px 7px;
-  }
-
-  button {
-    border: solid 1px #ffffe3;
-    padding: 5px 15px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #ffffe3;
-    color: #40445c;
-  }
-
-  form p {
-    margin: 0.3rem 0px;
-  }
-  form p:last-of-type {
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
 </style>
