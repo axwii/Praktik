@@ -1,0 +1,55 @@
+---
+---
+<ul role="list" class="hover-effect-list">
+    <li><a href="#">Each</a></li>
+    <li><a href="#">Link</a></li>
+    <li><a href="#">Has</a></li>
+    <li><a href="#">Its Own</a></li>
+    <li><a href="#">Hover</a></li>
+    <li><a href="#">Animation</a></li>
+    <li><a href="#">Seamlessly</a></li>
+    <li><a href="#">Transitioning</a></li>
+    <li><a href="#">Into The</a></li>
+    <li><a href="#">Next</a></li>
+</ul>
+
+<style>
+:root {
+    --paper: black;
+    --ink: white;
+    --speed: 0.33s;
+    --ease: cubic-bezier(0.415, 0.595, 0.320, 0.915);
+}
+
+.hover-effect-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 200px;
+}
+
+.hover-effect-list a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: var(--ink);
+    transition: color var(--speed), background-position var(--speed);
+    font-size: 3rem;
+    border-top: 1px solid #666;
+    background: linear-gradient(to bottom, var(--paper) 0%, var(--paper) 50%, var(--ink) 50%);
+    background-size: 100% 200%;
+    background-position: 0 0;
+    text-decoration: underline;
+    text-decoration-thickness: 1px; /* Adjust the thickness as needed */
+    text-underline-offset: 4px; /* Adjust the offset as needed */
+}
+
+.hover-effect-list a:last-child {
+    border-bottom: 1px solid #666;
+}
+
+.hover-effect-list a:hover,
+.hover-effect-list a:focus {
+    color: var(--paper);
+    background-position: 0 100%;
+}
+</style>
