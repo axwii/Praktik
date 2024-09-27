@@ -97,6 +97,7 @@
 
   section {
     border-top: 1px solid #666653;
+    overflow: hidden;
 
     --gap: clamp(1rem, 6vw, 3rem);
     --full: minmax(var(--gap), 1fr);
